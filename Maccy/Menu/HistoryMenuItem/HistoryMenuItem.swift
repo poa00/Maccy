@@ -96,7 +96,7 @@ class HistoryMenuItem: NSMenuItem {
   func onSelect(_ sender: NSMenuItem) {
     select()
     // Only call this in the App Store version.
-    // AppStoreReview.ask()
+    AppStoreReview.ask()
   }
 
   func select() {

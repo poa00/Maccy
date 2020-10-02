@@ -3,7 +3,6 @@ import Intents
 import KeyboardShortcuts
 import LaunchAtLogin
 import Sauce
-import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -11,16 +10,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   private var hotKey: GlobalHotKey!
   private var maccy: Maccy!
-
-  func applicationWillFinishLaunching(_ notification: Notification) {
-    if ProcessInfo.processInfo.arguments.contains("ui-testing") {
-      SPUUpdater(hostBundle: Bundle.main,
-                 applicationBundle: Bundle.main,
-                 userDriver: SPUStandardUserDriver(hostBundle: Bundle.main, delegate: nil),
-                 delegate: nil)
-        .automaticallyChecksForUpdates = false
-    }
-  }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     LaunchAtLogin.migrateIfNeeded()

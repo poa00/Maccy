@@ -44,11 +44,5 @@
 		<string>GetIntent</string>
 		<string>SelectIntent</string>
 	</array>
-	<key>SUEnableDownloaderService</key>
-	<true/>
-	<key>SUEnableInstallerLauncherService</key>
-	<true/>
-	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml</string>
 </dict>
 </plist>
